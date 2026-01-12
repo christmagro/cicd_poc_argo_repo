@@ -16,4 +16,4 @@ spec:
               service:
                 name: app-demo-cicd-poc-service
                 port:
-                  number: 80
+                  number: 8080
