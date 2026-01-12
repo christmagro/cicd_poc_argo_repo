@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app-demo-cicd-poc
-        image: christmagro/app-demo-cicd-poc:cd4c5f4 # Jenkins will replace this
+        image: christmagro/app-demo-cicd-poc:d5f83cb # Jenkins will replace this
         ports:
         - containerPort: 80
         resources:
