@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: APP_PLACEHOLDER
+  name: app-demo-cicd-poc
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: APP_PLACEHOLDER
+      app: app-demo-cicd-poc
   template:
     metadata:
       labels:
-        app: APP_PLACEHOLDER
+        app: app-demo-cicd-poc
     spec:
       containers:
-      - name: APP_PLACEHOLDER
-        image: christmagro/app-demo-cicd-poc:37fcf7c # Jenkins will replace this
+      - name: app-demo-cicd-poc
+        image: christmagro/app-demo-cicd-poc:017398e # Jenkins will replace this
         ports:
         - containerPort: 80
         resources:

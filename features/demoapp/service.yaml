@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: APP_PLACEHOLDER-service
+  name: app-demo-cicd-poc-service
 spec:
   selector:
-    app: APP_PLACEHOLDER
+    app: app-demo-cicd-poc
   ports:
     - protocol: TCP
       port: 80

@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: APP_PLACEHOLDER-ingress
+  name: app-demo-cicd-poc-ingress
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
@@ -14,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: APP_PLACEHOLDER-service
+                name: app-demo-cicd-poc-service
                 port:
                   number: 80
