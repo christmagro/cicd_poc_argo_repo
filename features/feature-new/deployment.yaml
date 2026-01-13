@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-demo-cicd-poc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-demo-cicd-poc
+  template:
+    metadata:
+      labels:
+        app: app-demo-cicd-poc
+    spec:
+      containers:
+      - name: app-demo-cicd-poc
+        image: christmagro/app-demo-cicd-poc:8419432 # Jenkins will replace this
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: "200m"
+            memory: "256Mi"

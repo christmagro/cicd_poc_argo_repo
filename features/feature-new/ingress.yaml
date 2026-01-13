@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-demo-cicd-poc-ingress
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: app-demo-cicd-poc-feature-new.localhost # Jenkins will replace this (e.g. feature1.localhost)
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: app-demo-cicd-poc-service
+                port:
+                  number: 8080
